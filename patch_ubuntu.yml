@@ -1,0 +1,9 @@
+---
+- name: patch ubuntu or debian instances
+  hosts: all
+  become: true
+  tasks:
+    - name: patch using apt
+      apt:
+        name: '*'
+        state: latest
